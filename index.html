@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mohona Maisa Maliha! 🎉</title>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Chopin+Script&family=Cinzel:wght@600;700&family=Dancing+Script:wght@400;500;600;700&family=Playball&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div id="youtubeMusic" class="youtube-music" aria-hidden="true">
+    <iframe
+        id="ytPlayer"
+        src="https://www.youtube.com/embed/sANa_nO-4zs?enablejsapi=1&autoplay=0&loop=1&playlist=sANa_nO-4zs"
+        title="Birthday background music"
+        allow="autoplay; encrypted-media"
+        loading="lazy">
+    </iframe>
+</div>
+
+<button id="musicBtn" class="music-btn" type="button">🎵</button>
+
+<main class="container">
+
+<section id="screen1" class="screen active">
+    <div class="card hero">
+        <div class="date">🗓️ 19 August, 2026</div>
+        <h1>Happy Birthday<br><span>Mohona Maisa Maliha</span> 🎂</h1>
+        <p>A little digital surprise made with friendship, code, and unforgettable memories.</p>
+        <button class="btn" onclick="goToScreen(2)">Start Surprise ✨</button>
+    </div>
+</section>
+
+<section id="screen2" class="screen">
+    <div class="floating-emoji emoji-a">✦</div>
+    <div class="floating-emoji emoji-b">♡</div>
+    <div class="floating-emoji emoji-c">✧</div>
+    <div class="floating-emoji emoji-d">♡</div>
+
+    <div class="card letter-card">
+        <div class="letter-kicker">💌 A little letter from the heart 💌</div>
+        <h2 class="letter-title">Happy Birthday, Mohona Maisa Maliha! 🎂</h2>
+
+        <div class="letter">
+            <p class="script-note dear">Dear Mohona,</p>
+
+            <p class="script-note">
+                Wishing you the happiest birthday! Looking back at how we started as university
+                study partners and grew into best friends is one of my favorite journeys.
+            </p>
+
+            <p class="script-note">
+                On your special day, my biggest wish for you is to reach incredible heights in life
+                and achieve everything you’ve ever dreamed of. I’ve seen firsthand how hardworking
+                and talented you are, and I have zero doubt that you are destined for massive success.
+                May every goal you set, every career milestone you chase, and every ambition you hold
+                close turn into reality.
+            </p>
+
+            <p class="script-note">
+                Keep striving forward with that same drive and determination. I know you are going
+                to do amazing things in the future, and I’ll always be right here cheering you on.
+            </p>
+
+            <p class="script-note">
+                Wishing you a bright, prosperous, and successful year ahead!
+            </p>
+
+            <p class="script-note closing">
+                Happy Birthday once again! ❤️✨
+            </p>
+        </div>
+
+        <div class="letter-decor">✦ &nbsp; ♡ &nbsp; ✦</div>
+        <button class="btn" onclick="goToScreen(3)">Open Our Memories 📸</button>
+    </div>
+</section>
+
+<section id="screen3" class="screen">
+    <h2 class="section-title">📸 Our Beautiful Memories</h2>
+    <p class="subtitle">12 moments, countless memories ❤️<br>Click any picture to see it bigger.</p>
+    <div id="gallery" class="gallery"></div>
+    <div class="center"><button class="btn" onclick="goToScreen(4)">Friends' Wishes 💬</button></div>
+</section>
+
+<section id="screen4" class="screen">
+    <div class="card">
+        <h2>💬 Birthday Wishes Wall</h2>
+        <p class="subtitle">Leave a little message for Mohona ❤️</p>
+        <form id="wishForm">
+            <input id="name" maxlength="40" placeholder="Your Name..." required>
+            <textarea id="message" maxlength="300" rows="4" placeholder="Write a special birthday wish..." required></textarea>
+            <button class="btn" type="submit">Send Wish 💌</button>
+        </form>
+        <div id="wishes"></div>
+    </div>
+
+        <div class="center"><button class="btn" onclick="goToScreen(5)">Open Your Virtual Gifts 🎁</button></div>
+</section>
+
+<section id="screen5" class="screen">
+    <div class="gift-page">
+        <div class="gift-sparkle s1">✦</div>
+        <div class="gift-sparkle s2">♡</div>
+        <div class="gift-sparkle s3">✧</div>
+        <div class="gift-sparkle s4">♡</div>
+
+        <p class="gift-kicker">A little surprise, just for you</p>
+        <h2 class="gift-title">Your Virtual Birthday Gifts</h2>
+        <p class="gift-subtitle">
+            A few things I would put in a real gift box if I could hand it to you today.
+        </p>
+
+        <div class="gift-grid">
+
+            <article class="gift-item premium-gift bouquet-gift">
+                <div class="realistic-art bouquet-art">
+                    <span class="stem stem1"></span>
+                    <span class="stem stem2"></span>
+                    <span class="stem stem3"></span>
+                    <span class="flower flower1">✿</span>
+                    <span class="flower flower2">✿</span>
+                    <span class="flower flower3">✿</span>
+                    <span class="leaf leaf1"></span>
+                    <span class="leaf leaf2"></span>
+                </div>
+                <div class="gift-content">
+                    <span class="gift-label">GIFT 01</span>
+                    <h3>A Fresh Bouquet</h3>
+                    <p>
+                        A bouquet for every beautiful memory, every laugh,
+                        and every little moment that made our friendship special.
+                    </p>
+                    <div class="gift-detail">Hand-picked with love · Forever fresh</div><button class="surprise-btn" type="button" onclick="openGiftSurprise(1)">Open Surprise</button>
+                </div>
+            </article>
+
+            <article class="gift-item premium-gift beauty-gift">
+                <div class="realistic-art beauty-art">
+                    <div class="compact">
+                        <span class="compact-shine"></span>
+                    </div>
+                    <div class="lipstick">
+                        <span class="lipstick-body"></span>
+                        <span class="lipstick-tip"></span>
+                    </div>
+                    <div class="perfume">
+                        <span class="perfume-cap"></span>
+                        <span class="perfume-liquid"></span>
+                    </div>
+                </div>
+                <div class="gift-content">
+                    <span class="gift-label">GIFT 02</span>
+                    <h3>A Little Beauty Box</h3>
+                    <p>
+                        A tiny virtual beauty set for the days when you want
+                        to feel polished, confident, and completely yourself.
+                    </p>
+                    <div class="gift-detail">Mirror · Lip color · Perfume</div><button class="surprise-btn" type="button" onclick="openGiftSurprise(2)">Open Surprise</button>
+                </div>
+            </article>
+
+            <article class="gift-item premium-gift wish-gift">
+                <div class="realistic-art wish-art">
+                    <div class="glass-jar">
+                        <span class="jar-lid"></span>
+                        <span class="wish-star ws1">✦</span>
+                        <span class="wish-star ws2">✧</span>
+                        <span class="wish-star ws3">✦</span>
+                        <span class="wish-star ws4">✧</span>
+                    </div>
+                </div>
+                <div class="gift-content">
+                    <span class="gift-label">GIFT 03</span>
+                    <h3>A Jar of Wishes</h3>
+                    <p>
+                        Every little light inside this jar represents a wish
+                        for your future: happiness, success, peace, and courage.
+                    </p>
+                    <div class="gift-detail">Open whenever you need a little hope</div><button class="surprise-btn" type="button" onclick="openGiftSurprise(3)">Open Surprise</button>
+                </div>
+            </article>
+
+
+            <article class="gift-item premium-gift cake-gift">
+                <div class="realistic-art cake-preview-art">
+                    <div class="mini-cake">
+                        <div class="mini-flame"></div>
+                        <div class="mini-candle"></div>
+                        <div class="mini-icing"></div>
+                        <div class="mini-cake-body"></div>
+                    </div>
+                </div>
+                <div class="gift-content">
+                    <span class="gift-label">GIFT 05</span>
+                    <h3>Make a Birthday Wish</h3>
+                    <p>
+                        A little virtual birthday ritual: light the candles, make a wish,
+                        and cut the cake when you're ready.
+                    </p>
+                    <div class="gift-detail">A tiny celebration made just for you</div>
+                    <button class="surprise-btn" type="button" onclick="openCakeExperience()">Cut the Cake 🎂</button>
+                </div>
+            </article>
+
+            <article class="gift-item premium-gift special-gift">
+                <div class="realistic-art box-art">
+                    <div class="ribbon-v"></div>
+                    <div class="ribbon-h"></div>
+                    <div class="box-bow">⌁</div>
+                </div>
+                <div class="gift-content">
+                    <span class="gift-label">GIFT 04</span>
+                    <h3>Something Special</h3>
+                    <p>
+                        Not everything precious can be wrapped. So this one is
+                        a promise: I will always be cheering for you.
+                    </p>
+                    <div class="gift-detail">For my forever university bestie</div><button class="surprise-btn" type="button" onclick="openGiftSurprise(4)">Open Surprise</button>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="gift-box-wrap">
+            <div class="real-gift-box">
+                <div class="box-lid">
+                    <span class="lid-ribbon"></span>
+                </div>
+                <div class="box-body">
+                    <span class="box-ribbon-v"></span>
+                    <span class="box-ribbon-h"></span>
+                </div>
+            </div>
+        </div>
+
+        <p class="final-wish">
+            May your next chapter be softer, brighter, happier, and wildly successful.<br>
+            <span>Happy Birthday, Mohona! ♡</span>
+        </p>
+    </div>
+</section>
+
+</main>
+
+
+<div id="cakeExperience" class="cake-modal" aria-hidden="true">
+    <div class="cake-card">
+        <button class="surprise-close" type="button" onclick="closeCakeExperience()">×</button>
+        <p class="surprise-kicker">Your virtual birthday cake</p>
+        <h2>Make a Wish, Mohona ✨</h2>
+        <p class="cake-instruction" id="cakeInstruction">Light the candles first.</p>
+
+        <div class="big-cake-scene" id="bigCakeScene">
+            <div class="cake-candles">
+                <button class="candle" onclick="lightCandle(this)" aria-label="Light candle"><span class="wick"></span><span class="flame"></span></button>
+                <button class="candle" onclick="lightCandle(this)" aria-label="Light candle"><span class="wick"></span><span class="flame"></span></button>
+                <button class="candle" onclick="lightCandle(this)" aria-label="Light candle"><span class="wick"></span><span class="flame"></span></button>
+                <button class="candle" onclick="lightCandle(this)" aria-label="Light candle"><span class="wick"></span><span class="flame"></span></button>
+                <button class="candle" onclick="lightCandle(this)" aria-label="Light candle"><span class="wick"></span><span class="flame"></span></button>
+            </div>
+            <div class="cake-top">HAPPY BIRTHDAY</div>
+            <div class="cake-layer top-layer"></div>
+            <div class="cake-layer bottom-layer"></div>
+            <div class="cake-plate"></div>
+            <div class="cake-knife" id="cakeKnife">🔪</div>
+        </div>
+
+        <div class="cake-actions">
+            <button class="cake-action" type="button" onclick="lightAllCandles()">Light All Candles 🕯️</button>
+            <button class="cake-action primary" id="cutCakeBtn" type="button" onclick="cutCake()">Cut the Cake 🎂</button>
+            <button class="cake-action" type="button" onclick="resetCake()">Celebrate Again ✨</button>
+        </div>
+
+        <p class="cake-result" id="cakeResult"></p>
+    </div>
+</div>
+
+<div id="giftSurprise" class="gift-surprise-modal" aria-hidden="true">
+    <div class="surprise-card">
+        <button class="surprise-close" type="button" onclick="closeGiftSurprise()">×</button>
+        <div id="surpriseVisual" class="surprise-visual"></div>
+        <p id="surpriseKicker" class="surprise-kicker">A little surprise</p>
+        <h2 id="surpriseTitle"></h2>
+        <p id="surpriseText"></p>
+        <div id="surpriseDecor" class="surprise-decor"></div>
+    </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+    <button class="close" onclick="closeLightbox()">×</button>
+    <img id="bigImage" alt="Memory">
+    <h3 id="bigTitle"></h3>
+    <p id="bigCaption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
